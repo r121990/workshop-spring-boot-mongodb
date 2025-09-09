@@ -19,7 +19,7 @@ public class User implements Serializable {
 	private String name;
 	private String email;
 	
-	@DBRef(lazy = true) // Referência para posts (opção de design)
+	@DBRef(lazy = true) // Referência para posts com carregamento tardio(opção de design)
 	private List<Post> posts = new ArrayList<>();
 
 	public User() {
